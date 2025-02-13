@@ -1,2 +1,6 @@
 #!/bin/bash
-id -un
+if [ "$(id -u)" -eq 0 ]; then
+  echo "root"
+else
+  echo "Not running as root"
+fi
